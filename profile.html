@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Profile</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .profile-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .profile-picture {
+            width: 100%;
+            height: 200px;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .profile-picture img {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 5px;
+        }
+
+        .profile-details {
+            padding: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        p {
+            margin: 10px 0;
+            color: #666;
+        }
+
+        .medical-history {
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        #image{
+            width: 25vw;
+            height:25vh;
+        }
+        nav {
+            background-color: #eee;
+            padding: 10px;
+            text-align: left; /* Align text to the left */
+        }
+
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            padding: 65px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Patient Profile</h1>
+    </header>
+    <nav>
+        <a href="#">Dashboard</a>
+        <a href="#">Book your appointment</a>
+        <a href="#">Vaccine details</a>
+        <a href="#">Pharmacy</a>
+    </nav>
+
+    <div class="profile-container">
+        <div class="profile-picture">
+            <img src="https://ak.picdn.net/shutterstock/videos/22795600/thumb/11.jpg?ip=x480" id="image" >
+        </div>
+
+        <div class="profile-details">
+            <h2>Patient Name</h2>
+            <p>Age: 30</p>
+            <p>Gender: Female</p>
+            <p>Email: patient@example.com</p>
+            <p>Phone: +91934567890</p>
+        </div>
+
+        <div class="medical-history">
+            <h2>Medical History</h2>
+            <p>Previous Conditions: None</p>
+            <p>Current Medications: Aspirin, Vitamin C</p>
+            <p>Allergies: None</p>
+            <p>Recent Procedures: None</p>
+        </div>
+    </div>
+</body>
+</html>

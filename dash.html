@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            text-align: left; 
+        }
+
+        nav {
+            background-color: #eee;
+            padding: 10px;
+            text-align: left;
+        }
+
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .dashboard {
+            display: none; 
+            padding: 20px;
+        }
+
+        .widget {
+            width: 100px;
+            min-height: 50px;
+            background-color: #f5f5f5;
+            margin: 10px 0; 
+            padding: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            text-align: left; 
+        }
+        .head{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .btn{
+           height: fit-content;
+            padding: .4rem;
+            font-size: 1rem;
+        }
+        nav {
+            background-color: #eee;
+            padding: 10px;
+            text-align: left; /* Align text to the left */
+        }
+
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            padding: 65px;
+        }
+        .head1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="head">
+        <h1 class="head1">Dashboard</h1>
+        <button class="btn">Logout</button>
+    </div>
+    </header>
+    <nav>
+        <a href="#">Dashboard</a>
+        <a href="#">Book your appointment</a>
+        <a href="#">Vaccine details</a>
+        <a href="#">Pharmacy</a>
+    </nav>
+
+    <nav>
+        <a href="#" onclick="toggleDashboard()">Show Dashboard</a>
+    </nav>
+
+    <div class="dashboard" id="dashboard">
+        <div class="widget">
+            <h4><a href="#">Profile</a></h4>
+        </div>
+
+        <div class="widget">
+            <h4><a href="#">Booked appointments</a></h4>
+        </div>
+
+        <div class="widget">
+            <h4><a href="#">Transactions</a></h4>
+        </div>
+
+        <div class="widget">
+            <h4><a href="#">Prescription</a></h4>
+        </div>
+    </div>
+
+    <script>
+        function toggleDashboard() {
+            var dashboard = document.getElementById('dashboard');
+            dashboard.style.display = (dashboard.style.display === 'none') ? 'block' : 'none';
+        }
+    </script>
+</body>
+</html>

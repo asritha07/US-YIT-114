@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 500px;
+            margin: 0 auto;
+        }
+
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        form input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        form button {
+            background-color: #4caf50;
+            color: #ffffff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #45a049;
+        }
+
+        .toggle-form {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <form id="loginForm">
+            <h2>Login</h2>
+            <label for="loginUsername">Username/Email</label>
+            <input type="text" id="loginUsername" name="loginUsername" required>
+
+            <label for="loginPassword">Password</label>
+            <input type="password" id="loginPassword" name="loginPassword" required>
+
+            <button type="submit">Login</button>
+        </form>
+
+        <div class="toggle-form">
+            <p>Don't have an account? <a href="#" onclick="toggleForm('signupForm')">Sign Up</a></p>
+        </div>
+
+        <form id="signupForm" style="display: none;">
+            <h2>Sign Up</h2>
+            <label for="signupUsername">First name</label>
+            <input type="text" id="signupUsername" name="signupUsername" required>
+
+            <label for="Username">Last name</label>
+            <input type="text" id="signupUsername" name="signupUsername" required>
+
+            <label for="dob">Enter your DOB</label>
+            <input type="date" id="birthday" name="birthday">
+
+            <label for="gender">Gender</label>
+            <select name="gender">
+            <option value="">Please select one…</option>
+            <option value="female">Female</option>
+            <option value="male">Male</option>
+            <option value="non-binary">Non-Binary</option>
+            <option value="other">Other</option>
+            <option value="Prefer not to answer">Perfer not to Answer</option>
+            
+  </select>
+            <br>
+            <br>
+
+            <label for="signupEmail">Email</label>
+            <input type="email" id="signupEmail" name="signupEmail" required>
+
+            <label for="uname">Username</label>
+            <input type="uname" id="uname" name="uname" required>
+
+
+            <label for="signupPassword">Password</label>
+            <input type="password" id="signupPassword" name="signupPassword" required>
+
+            <button type="submit">Sign Up</button>
+        </form>
+
+        <div class="toggle-form">
+            <p>Already have an account? <a href="#" onclick="toggleForm('loginForm')">Login</a></p>
+        </div>
+    </div>
+
+    <script>
+        function toggleForm(formId) {
+            document.getElementById('loginForm').style.display = 'none';
+            document.getElementById('signupForm').style.display = 'none';
+
+            document.getElementById(formId).style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>

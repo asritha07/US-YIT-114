@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booked appointment</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .appointment-list {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .appointment {
+            padding: 20px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .widget {
+            width: 95vw;
+            height: 10vh;
+            min-height: 60px;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .book-widget {
+            background-color: #3498db;
+        }
+
+        .cancelled-widget {
+            background-color: #e74c3c; 
+        }
+
+        .previous-widget {
+            background-color: #2980b9; 
+        }
+
+        h2 {
+            margin: 0;
+        }
+
+        p {
+            color: #fff;
+        }
+        nav {
+            background-color: #eee;
+            padding: 10px;
+            text-align: left; /* Align text to the left */
+        }
+
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            padding: 65px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Appointment List</h1>
+    </header>
+    <nav>
+        <a href="#">Dashboard</a>
+        <a href="#">Book your appointment</a>
+        <a href="#">Vaccine details</a>
+        <a href="#">Pharmacy</a>
+    </nav>
+
+    <div class="appointment-list">
+        
+</div>
+<ul>
+            <li class="appointment">
+                <div class="widget cancelled-widget">
+                    <h2>Cancelled Appointment - Dr. Johnson</h2>
+                    <h3>12th january</h3>
+                    
+                </div>
+            </li>
+            <li class="appointment">
+                <div class="widget previous-widget">
+                    <h2>Previous Appointment - Dr. Williams</h2>
+                    <h3>22th january</h3>
+                    
+                    
+                </div>
+            </li>
+            <li class="appointment">
+                <div class="widget previous-widget">
+                    <h2>Previous Appointment - Dr. Smith</h2>
+                    <h3>02th january</h3></div>
+                    <li class="appointment">
+                        <div class="widget cancelled-widget">
+                            <h2>Cancelled Appointment - Dr. pratap</h2>
+                            <h3>22th December</h3>
+                            
+                        </div>
+                    
+        </ul>
+    </div>
+
+    <div id="book-appointment" style="display: none;">
+        <h2>Book Appointment Form</h2>
+        <form>
+            <input type="text" placeholder="Name">
+            <input type="datetime-local" placeholder="Appointment Date and Time">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <div id="canceled-appointments" style="display: none;">
+        <h2>Canceled Appointments</h2>
+        <p>No canceled appointments at the moment.</p>
+    </div>
+
+    <div id="previous-appointments" style="display: none;">
+        <h2>Previous Appointments</h2>
+        <p>No previous appointments to display.</p>
+    </div>
+</body>
+</html>

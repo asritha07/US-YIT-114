@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaccine details upload</title>
+    <link rel="stylesheet" href="vacc.css">
+</head>
+<body>
+    <header>
+        <h1>Vaccine details upload</h1>
+    </header>
+
+    <nav>
+        <a href="#">Dashboard</a>
+        <a href="#">Book your appointment</a>
+        <a href="#">Vaccine details</a>
+        <a href="#">Pharmacy</a>
+    </nav> 
+
+    <section id="vaccineDetails">
+        
+        
+        <form id="vaccineForm">
+            <label for="ageRange">Age Range:</label>
+            <input type="text" id="ageRange" name="ageRange" placeholder="1 day - 18 years" required>
+
+            <label for="vaccineName">Vaccine Name:</label>
+            <input type="text" id="vaccineName" name="vaccineName" required>
+
+            <label for="vaccineDate">Vaccine Date:</label>
+            <input type="date" id="vaccineDate" name="vaccineDate" required>
+
+            <button type="submit">Send sample mail</button>
+        </form>
+    </section>
+
+   
+
+    <script src="vacc.js"></script>
+</body>
+</html>
