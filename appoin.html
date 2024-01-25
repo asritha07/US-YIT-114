@@ -12,60 +12,48 @@
         <h1>Doctor Appointment System</h1>
     </header>
     <nav>
-        <a href="#">Dashboard</a>
-        <a href="#">Book your appointment</a>
-        <a href="#">Vaccine details</a>
-        <a href="#">Pharmacy</a>
+        <a href="http://127.0.0.1:5500/dash.html#">Dashboard</a>
+        <a href="http://127.0.0.1:5500/appoin.html?dept=derm&doctor=dr_smith&date=2024-01-12&time=02%3A32#">Book your appointment</a>
+        <a href="http://127.0.0.1:5500/vacc.html#">Vaccine details</a>
+        <a href="http://127.0.0.1:5500/pharmacy.html#">Pharmacy</a>
     </nav>
 
-    <section id="upcomingAppointments">
-        <h2>Upcoming Appointments</h2>
-        
-        <ul>
-            <li>Dr. Smith - Dermatology - January 25, 2024 at 10:00 AM</li>
-            <li>Dr. Johnson - Dermatology - January 26, 2024 at 2:30 PM</li>
-            
-        </ul>
-    </section>
+   
 
     <section id="newAppointment">
         <h2>Create a New Appointment</h2>
         
-        <form>
-            <label for="dept">Select Department:</label>
-            <select id="dept" name="dept" required>
-                <option value="derm">Dermatology</option>
-                <option value="card">Cardiology</option>
-                <option value="gen">General</option>
-                <option value="orth">Orthology</option>
-                <option value="neu">Neurology</option>
-                
-            </select>
-
-            <label for="doctor">Select Doctor:</label>
-            <select id="doctor" name="doctor" required>
-                <option value="dr_smith">Dr. Smith - Dermatology</option>
-                <option value="dr_johnson">Dr. Johnson - Dermatology</option>
-                
-            </select>
-
-            <label for="date">Select Date:</label>
-            <input type="date" id="date" name="date" required>
-
-        <label for="appointmentTime">Appointment Time:</label>
-        <select id="appointmentTime" name="appointmentTime" required>
-            <option value="" disabled selected>Select a time</option>
-            <option value="09:00">9:00 AM</option>
-            <option value="09:30">9:30 AM</option>
-            <option value="10:00" class="booked">10:00 AM (Booked)</option>
-            <option value="10:30" class="booked">10:30 AM (Booked)</option>
-            <!-- ... Add more time slots as needed -->
-        </select>
-
-            
-        <button type="submit" id="submit" >Create Appointment</button>
-
-        </form>
+                <form id="appointmentForm">
+                    <label for="dept">Select Department:</label>
+                    <select id="doctor" name="doctor" required>
+                        <option value="derm">Dermatology</option>
+                        <option value="gyna">Gynacology</option>
+                        <option value="gen">General</option>
+                        <option value="neu">Neurology</option>
+                        <option value="neph">Nephrology</option>
+                    </select>
+                    
+                        <label for="doctor">Select Doctor:</label>
+                    <select id="doctor" name="doctor" required>
+                        <option value="dr_smith">Dr. Smith - Dermatology</option>
+                        <option value="dr_johnson">Dr. Johnson - Dermatology</option>
+                        <!-- Add more doctor options as needed -->
+                    </select>
+        
+                    <label for="date">Select Date:</label>
+                    <input type="date" id="date" name="date" required>
+        
+                    <label for="time">Select Time:</label>
+                    <input type="time" id="time" name="time" required>
+        
+                    <button type="button" onclick="submitAppointment()">Submit Appointment</button>
+                </form>
+        
+                <div id="output">
+                    <!-- Resulting output will be displayed here -->
+                </div>
+            </div>
     </section>
+    <script src="appoin.js"></script>
 </body>
 </html>

@@ -86,10 +86,10 @@
         <h1>Appointment List</h1>
     </header>
     <nav>
-        <a href="#">Dashboard</a>
-        <a href="#">Book your appointment</a>
-        <a href="#">Vaccine details</a>
-        <a href="#">Pharmacy</a>
+        <a href="http://127.0.0.1:5500/dash.html#">Dashboard</a>
+        <a href="http://127.0.0.1:5500/appoin.html?dept=derm&doctor=dr_smith&date=2024-01-12&time=02%3A32#">Book your appointment</a>
+        <a href="http://127.0.0.1:5500/vacc.html#">Vaccine details</a>
+        <a href="http://127.0.0.1:5500/pharmacy.html#">Pharmacy</a>
     </nav>
 
     <div class="appointment-list">
@@ -130,8 +130,11 @@
         <form>
             <input type="text" placeholder="Name">
             <input type="datetime-local" placeholder="Appointment Date and Time">
-            <button type="submit">Submit</button>
+            <button type="button" onclick="submitAppointment()">Submit Appointment</button>
         </form>
+        <div id="output">
+            <!-- Resulting output will be displayed here -->
+        </div>
     </div>
 
     <div id="canceled-appointments" style="display: none;">
@@ -143,5 +146,6 @@
         <h2>Previous Appointments</h2>
         <p>No previous appointments to display.</p>
     </div>
+    <script src="bookedapp.js"></script>
 </body>
 </html>
